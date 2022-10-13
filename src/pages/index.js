@@ -20,7 +20,6 @@ export default function Home() {
 				if (amount <= item?.key * aRollOfMoney && amount >= item?.key) {
 					allMoney = [...allMoney, { ...item, count: Math.floor(amount / item?.key) }];
 					amount -= Math.floor(amount / item?.key) * item?.key;
-					console.log("item", item);
 				} else {
 					return; // continue
 				}

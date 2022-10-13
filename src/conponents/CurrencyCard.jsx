@@ -5,13 +5,8 @@ import PropTypes from 'prop-types'
 const CurrencyCard = ({ img, count, name }) => {
     return (
         <div className="card">
-            <div className="relative">
-                <Image
-                    className="card-img-top"
-                    objectFit={"contain"}
-                    src={img}
-                    alt="Card image cap"
-                />
+            <div className="relative card-img-top">
+                <Image src={img} alt="" />
             </div>
             <div className="card-body">
                 <h5 className="card-title">{name} so'm: {count} ta</h5>
