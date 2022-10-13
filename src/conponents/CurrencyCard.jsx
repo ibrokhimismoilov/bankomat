@@ -6,10 +6,10 @@ const CurrencyCard = ({ img, count, name }) => {
     return (
         <div className="card">
             <div className="relative card-img-top">
-                <Image src={img} alt="" />
+                <Image src={img} alt="card" />
             </div>
             <div className="card-body">
-                <h5 className="card-title">{name} so'm: {count} ta</h5>
+                <h5 className="card-title">{`${name} so'm: ${count} ta`}</h5>
             </div>
         </div >
     )
