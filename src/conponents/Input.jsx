@@ -11,7 +11,7 @@ const Input = ({ value, onChange }) => {
                 onChange={(e) => onChange(e?.target?.value)}
                 min={0}
                 aria-label="3-digit prefix"
-                max={999999999}
+                max={99999999}
                 minLength={1}
                 maxLength={9}
                 pattern="[0-9\/]*"

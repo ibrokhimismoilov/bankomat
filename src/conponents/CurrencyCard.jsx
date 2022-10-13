@@ -2,10 +2,10 @@ import React from 'react'
 import Image from "next/image";
 import PropTypes from 'prop-types'
 
-const CurrencyCard = ({ img, count }) => {
+const CurrencyCard = ({ img, count, name }) => {
     return (
         <div className="card">
-            <div classNameName="relative">
+            <div className="relative">
                 <Image
                     className="card-img-top"
                     objectFit={"contain"}
@@ -14,11 +14,9 @@ const CurrencyCard = ({ img, count }) => {
                 />
             </div>
             <div className="card-body">
-                <p className="card-text">
-                    {count}
-                </p>
+                <h5 className="card-title">{name} so'm: {count} ta</h5>
             </div>
-        </div>
+        </div >
     )
 }
 
@@ -29,7 +27,7 @@ CurrencyCard.defaultProps = {
 
 
 CurrencyCard.propTypes = {
-    img: PropTypes.string,
+    img: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
     count: PropTypes.number,
 }
 
